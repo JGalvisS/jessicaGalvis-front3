@@ -15,6 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.15.0'  # Puedes ajustar la versión según las necesidades de tu proyecto
       - uses: actions/checkout@v3
         with:
           submodules: true
